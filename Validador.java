@@ -1,30 +1,48 @@
 import java.util.Scanner;
 
 public class Validador {
-    private static Scanner scanner = new Scanner(System.in);
 
-    // Método seguro para leer números enteros (evita que el programa falle por letras)
+    private static final Scanner scanner = new Scanner(System.in);
+
+    // Lee un numero entero y vuelve a preguntar si el dato no es valido.
     public static int leerEntero(String mensaje) {
-        int numero = 0;
-        boolean entradaValida = false;
-        
-        while (!entradaValida) {
+        while (true) {
             System.out.print(mensaje);
-            if (scanner.hasNextInt()) {
-                numero = scanner.nextInt();
-                entradaValida = true;
-            } else {
-                System.out.println("❌ Error: Debe ingresar un número entero válido. Intente de nuevo.");
-                scanner.next(); // Limpia el búfer del scanner
+            String entrada = scanner.nextLine().trim();
+
+            try {
+                return Integer.parseInt(entrada);
+            } catch (NumberFormatException e) {
+                System.out.println("Error: debe ingresar un numero entero.");
             }
         }
-        scanner.nextLine(); // Limpia el salto de línea pendiente
-        return numero;
     }
 
-    // Método para leer texto de forma limpia
+    // Lee un entero y comprueba que este dentro del rango permitido.
+    public static int leerEntero(String mensaje, int minimo, int maximo) {
+        while (true) {
+            int numero = leerEntero(mensaje);
+
+            if (numero >= minimo && numero <= maximo) {
+                return numero;
+            }
+
+            System.out.println("Error: ingrese un numero entre "
+                    + minimo + " y " + maximo + ".");
+        }
+    }
+
+    // Lee un texto y evita que el usuario deje el campo vacio.
     public static String leerTexto(String mensaje) {
-        System.out.print(mensaje);
-        return scanner.nextLine();
+        while (true) {
+            System.out.print(mensaje);
+            String texto = scanner.nextLine().trim();
+
+            if (!texto.isEmpty()) {
+                return texto;
+            }
+
+            System.out.println("Error: este campo no puede quedar vacio.");
+        }
     }
 }
