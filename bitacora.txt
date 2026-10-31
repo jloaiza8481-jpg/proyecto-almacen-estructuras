@@ -1,0 +1,15 @@
+Fecha: 30 de octubre de 2026
+Integrante: Integrante 3 (Control de Calidad, Pruebas y Bitácora)
+
+1. ¿Qué se trabajó hoy?
+- Se configuró el repositorio local clonado desde GitHub en Visual Studio Code.
+- Se programó la clase Validador.java para la captura segura de datos por consola mediante Scanner sin usar java.util en las estructuras.
+- Se creó la excepción personalizada EstructuraVaciaException para manejar casos límite.
+
+2. ¿Qué inteligencia artificial se utilizó?
+- Prompt: "¿Cómo estructurar las validaciones de entrada en Java mediante consola para evitar que el programa falle si el usuario introduce caracteres incorrectos?"
+- Respuesta de la IA: Se sugirió el uso de un bucle while combinando hasNextInt() en una clase utilitaria.
+- Adaptación al proyecto: Se adaptó en la clase Validador.java para unificar las entradas del sistema de logística del almacén.
+
+3. ¿Qué problemas se encontraron?
+- Ninguno en esta fase inicial de configuración y creación de módulos base.
