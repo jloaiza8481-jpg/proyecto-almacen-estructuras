@@ -13,3 +13,8 @@ Integrante: Integrante 3 (Control de Calidad, Pruebas y Bitácora)
 
 3. ¿Qué problemas se encontraron?
 - Ninguno en esta fase inicial de configuración y creación de módulos base.
+
+4. ¿Qué se trabajó adicionalmente hoy?
+- Se realizó el Pull desde GitHub para integrar los módulos de Cola, Pila, Nodo, Main y SistemaLogistica de los compañeros.
+- Se organizaron y validaron todos los archivos fuente dentro de la carpeta src del proyecto para asegurar una compilación limpia en Java.
+- Se verificó la correcta integración de la clase Validador dentro del menú interactivo y las opciones de logística del sistema.
